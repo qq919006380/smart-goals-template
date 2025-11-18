@@ -90,3 +90,31 @@ const { h1, subtitle, examples, howToWrite, faq, currentPath, variant } = Astro.
     </div>
   </section>
 </Container>
+
+<!-- FAQPage 结构化数据 -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+})} />
+
+<!-- HowTo 结构化数据 -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": `How to Write ${h1}`,
+  "description": subtitle,
+  "step": howToWrite.map((step, index) => ({
+    "@type": "HowToStep",
+    "position": index + 1,
+    "name": step.title,
+    "text": step.description
+  }))
+})} />

@@ -1,0 +1,272 @@
+---
+// 可编辑的SMART Goals模板组件
+---
+
+<section class="my-16 bg-slate-50 rounded-lg p-6 md:p-12 editable-template-container">
+  <h2 class="text-2xl md:text-3xl font-bold mb-6">SMART Goal Template (Click to Edit):</h2>
+
+  <div class="space-y-4 bg-white p-6 rounded-lg border-2 border-slate-200">
+    <div>
+      <label class="font-semibold text-slate-700">Specific:</label>
+      <div
+        contenteditable="true"
+        data-field="specific"
+        data-placeholder="Define what you want to accomplish in detail..."
+        class="editable-field min-h-[3rem] mt-2 p-3 rounded border-2 border-dashed border-slate-300
+               hover:border-slate-400 focus:border-blue-500 focus:outline-none
+               cursor-text transition-colors empty:before:content-[attr(data-placeholder)]
+               empty:before:text-slate-400"
+      ></div>
+    </div>
+
+    <div>
+      <label class="font-semibold text-slate-700">Measurable:</label>
+      <div
+        contenteditable="true"
+        data-field="measurable"
+        data-placeholder="How will you track progress and measure success?..."
+        class="editable-field min-h-[3rem] mt-2 p-3 rounded border-2 border-dashed border-slate-300
+               hover:border-slate-400 focus:border-blue-500 focus:outline-none
+               cursor-text transition-colors empty:before:content-[attr(data-placeholder)]
+               empty:before:text-slate-400"
+      ></div>
+    </div>
+
+    <div>
+      <label class="font-semibold text-slate-700">Achievable:</label>
+      <div
+        contenteditable="true"
+        data-field="achievable"
+        data-placeholder="Is this goal realistic given your resources?..."
+        class="editable-field min-h-[3rem] mt-2 p-3 rounded border-2 border-dashed border-slate-300
+               hover:border-slate-400 focus:border-blue-500 focus:outline-none
+               cursor-text transition-colors empty:before:content-[attr(data-placeholder)]
+               empty:before:text-slate-400"
+      ></div>
+    </div>
+
+    <div>
+      <label class="font-semibold text-slate-700">Relevant:</label>
+      <div
+        contenteditable="true"
+        data-field="relevant"
+        data-placeholder="Why does this goal matter to you?..."
+        class="editable-field min-h-[3rem] mt-2 p-3 rounded border-2 border-dashed border-slate-300
+               hover:border-slate-400 focus:border-blue-500 focus:outline-none
+               cursor-text transition-colors empty:before:content-[attr(data-placeholder)]
+               empty:before:text-slate-400"
+      ></div>
+    </div>
+
+    <div>
+      <label class="font-semibold text-slate-700">Time-bound:</label>
+      <div
+        contenteditable="true"
+        data-field="timebound"
+        data-placeholder="By when will you achieve this goal?..."
+        class="editable-field min-h-[3rem] mt-2 p-3 rounded border-2 border-dashed border-slate-300
+               hover:border-slate-400 focus:border-blue-500 focus:outline-none
+               cursor-text transition-colors empty:before:content-[attr(data-placeholder)]
+               empty:before:text-slate-400"
+      ></div>
+    </div>
+  </div>
+
+  <div class="mt-6 flex flex-wrap gap-4 justify-center action-buttons">
+    <button
+      id="exportButton"
+      class="px-6 py-3 bg-black text-white rounded-lg hover:bg-slate-800 transition-colors
+             font-medium flex items-center gap-2 disabled:opacity-50 disabled:cursor-wait"
+      type="button"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+      </svg>
+      <span>Export as Image</span>
+    </button>
+    <button
+      id="copyTemplate"
+      class="px-6 py-3 border-2 border-slate-300 text-slate-700 rounded-lg
+             hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium flex items-center gap-2"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+      </svg>
+      Copy Text
+    </button>
+    <button
+      id="clearTemplate"
+      class="px-6 py-3 border-2 border-slate-300 text-slate-700 rounded-lg
+             hover:border-slate-400 hover:bg-slate-50 transition-colors font-medium"
+    >
+      Clear All
+    </button>
+  </div>
+
+  <div
+    id="copyFeedback"
+    class="mt-4 p-3 bg-green-50 border-l-4 border-green-500 text-green-700 rounded hidden"
+  >
+    Template copied to clipboard!
+  </div>
+</section>
+
+<script>
+  import { snapdom } from '@zumer/snapdom';
+
+  // Export as image functionality
+  const exportButton = document.getElementById('exportButton');
+  const copyButton = document.getElementById('copyTemplate');
+  const clearButton = document.getElementById('clearTemplate');
+  const feedback = document.getElementById('copyFeedback');
+
+  exportButton?.addEventListener('click', async () => {
+    const btnElement = exportButton as HTMLButtonElement;
+    const span = btnElement.querySelector('span');
+    const originalText = span?.textContent;
+
+    try {
+      // 显示加载状态
+      btnElement.disabled = true;
+      if (span) span.textContent = 'Exporting...';
+
+      // 找到模板容器
+      const templateContainer = document.querySelector('.editable-template-container');
+      const actionButtons = document.querySelector('.action-buttons');
+
+      if (!templateContainer || !actionButtons) {
+        console.error('Container not found');
+        return;
+      }
+
+      // 隐藏按钮
+      (actionButtons as HTMLElement).style.display = 'none';
+
+      // 创建水印
+      const watermark = document.createElement('div');
+      watermark.textContent = 'Created with hasiyu.com';
+      watermark.style.cssText = `
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        color: #64748b;
+        font-size: 14px;
+        font-family: 'Inter Variable', sans-serif;
+        background: rgba(255,255,255,0.95);
+        padding: 6px 12px;
+        border-radius: 6px;
+        z-index: 9999;
+        pointer-events: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      `;
+
+      const container = templateContainer as HTMLElement;
+      const originalPosition = container.style.position;
+      if (!originalPosition || originalPosition === 'static') {
+        container.style.position = 'relative';
+      }
+
+      container.appendChild(watermark);
+
+      // 等待渲染
+      await new Promise(resolve => setTimeout(resolve, 100));
+
+      // 截图
+      const result = await snapdom(container, {
+        scale: 2,
+        quality: 0.95,
+        embedFonts: true
+      });
+
+      // 清理
+      container.removeChild(watermark);
+      if (!originalPosition || originalPosition === 'static') {
+        container.style.position = originalPosition;
+      }
+
+      // 下载
+      const variant = window.location.pathname.split('/').pop() || 'smart-goals';
+      await result.download({
+        format: 'png',
+        filename: `smart-goals-${variant}-${Date.now()}`
+      });
+
+      // 成功反馈
+      btnElement.classList.add('scale-110');
+      setTimeout(() => {
+        btnElement.classList.remove('scale-110');
+      }, 200);
+
+    } catch (error) {
+      console.error('Export failed:', error);
+      alert('Failed to export. Please try again.');
+    } finally {
+      // 恢复状态
+      btnElement.disabled = false;
+      if (span) span.textContent = originalText || 'Export as Image';
+      // 显示按钮
+      const actionButtons = document.querySelector('.action-buttons');
+      if (actionButtons) {
+        (actionButtons as HTMLElement).style.display = 'flex';
+      }
+    }
+  });
+
+  copyButton?.addEventListener('click', async () => {
+    const fields = document.querySelectorAll('.editable-field');
+    let text = 'SMART GOAL\n\n';
+
+    fields.forEach((field) => {
+      const label = field.previousElementSibling?.textContent;
+      const content = field.textContent?.trim() || '';
+      text += `${label}\n${content || '(Not filled)'}\n\n`;
+    });
+
+    try {
+      await navigator.clipboard.writeText(text);
+      feedback?.classList.remove('hidden');
+      setTimeout(() => {
+        feedback?.classList.add('hidden');
+      }, 3000);
+    } catch (err) {
+      console.error('Failed to copy to clipboard:', err);
+      alert('Failed to copy to clipboard. Please try again.');
+    }
+  });
+
+  // Clear template functionality
+  clearButton?.addEventListener('click', () => {
+    const fields = document.querySelectorAll('.editable-field');
+    fields.forEach((field) => {
+      field.textContent = '';
+    });
+  });
+
+  // Save to localStorage on input (auto-save draft)
+  const fields = document.querySelectorAll('.editable-field');
+  fields.forEach((field) => {
+    field.addEventListener('input', () => {
+      const fieldName = field.getAttribute('data-field');
+      if (fieldName) {
+        localStorage.setItem(`smart-goal-${fieldName}`, field.textContent || '');
+      }
+    });
+  });
+
+  // Load from localStorage on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    fields.forEach((field) => {
+      const fieldName = field.getAttribute('data-field');
+      if (fieldName) {
+        const saved = localStorage.getItem(`smart-goal-${fieldName}`);
+        if (saved) {
+          field.textContent = saved;
+        }
+      }
+    });
+  });
+</script>

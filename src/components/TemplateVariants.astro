@@ -1,0 +1,78 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath } = Astro.props;
+
+const templates = [
+  {
+    title: "General Template",
+    path: "/",
+    description: "Universal template for all types of SMART goals"
+  },
+  {
+    title: "Work / Professional",
+    path: "/smart-goals-template-for-work",
+    description: "Career objectives and workplace performance goals"
+  },
+  {
+    title: "Students",
+    path: "/smart-goals-template-for-students",
+    description: "Academic success and skill development goals"
+  },
+  {
+    title: "Marketing",
+    path: "/smart-goals-template-for-marketing",
+    description: "Campaign KPIs and measurable marketing objectives"
+  },
+  {
+    title: "Personal Development",
+    path: "/smart-goals-template-for-personal-development",
+    description: "Health, finance, and life improvement goals"
+  }
+];
+---
+
+<section class="my-8">
+  <h2 class="text-2xl font-bold mb-4 text-center">Choose Your Template</h2>
+
+  <!-- 响应式网格布局: 移动端1列,平板2列,桌面3列,超大屏5列 -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
+    {templates.map((template) => {
+      const isActive = template.path === "/" ? (!currentPath || currentPath === "/") : currentPath === template.path;
+      return (
+        <a
+          href={template.path}
+          class:list={[
+            "block p-4 rounded-lg border-2 transition-all",
+            isActive
+              ? "border-black bg-black text-white shadow-md"
+              : "border-slate-200 bg-white hover:border-slate-300 hover:shadow-sm"
+          ]}
+        >
+          <div class="flex flex-col">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="font-semibold text-base lg:text-lg flex-1">
+                {template.title}
+              </h3>
+              {isActive && (
+                <div class="ml-2 flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+              )}
+            </div>
+            <p class:list={[
+              "text-xs lg:text-sm",
+              isActive ? "text-slate-300" : "text-slate-600"
+            ]}>
+              {template.description}
+            </p>
+          </div>
+        </a>
+      );
+    })}
+  </div>
+</section>

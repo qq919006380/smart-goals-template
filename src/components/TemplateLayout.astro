@@ -1,0 +1,92 @@
+---
+import Container from "@/components/container.astro";
+import TemplateVariants from "@/components/TemplateVariants.astro";
+import EditableTemplate from "@/components/EditableTemplate.astro";
+
+interface Example {
+  title: string;
+  description: string;
+}
+
+interface HowToItem {
+  title: string;
+  description: string;
+}
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  h1: string;
+  subtitle: string;
+  examples: Example[];
+  howToWrite: HowToItem[];
+  faq: FAQ[];
+  currentPath: string;
+  variant: string;
+}
+
+const { h1, subtitle, examples, howToWrite, faq, currentPath, variant } = Astro.props;
+---
+
+<Container>
+  <!-- 头部标题区域 -->
+  <section class="text-center py-12 md:py-16">
+    <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold lg:tracking-tight xl:tracking-tighter">
+      {h1}
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-3xl mx-auto">
+      {subtitle}
+    </p>
+  </section>
+
+  <!-- 模板变体切换器 -->
+  <TemplateVariants currentPath={currentPath} />
+
+  <!-- 可编辑的SMART Goal模板（包含导出按钮） -->
+  <EditableTemplate />
+
+  <!-- 示例区域 -->
+  <section class="my-16 bg-slate-50 rounded-lg p-6 md:p-12">
+    <h2 class="text-3xl font-bold mb-8">Examples of SMART Goals</h2>
+
+    <div class="space-y-8">
+      {examples.map((example) => (
+        <div class="bg-white p-6 rounded-lg border-l-4 border-slate-800">
+          <h3 class="font-bold text-xl mb-3 text-slate-800">{example.title}</h3>
+          <p class="text-slate-700">{example.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- 如何编写 SMART Goals -->
+  <section class="my-16">
+    <h2 class="text-3xl font-bold mb-8 text-center">How to Write SMART Goals</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {howToWrite.map((item) => (
+        <div class="bg-slate-50 border border-slate-200 p-6 rounded-lg hover:shadow-md transition-shadow">
+          <h3 class="font-bold text-xl mb-3 text-slate-800">{item.title}</h3>
+          <p class="text-slate-700">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ 区域 -->
+  <section class="my-16">
+    <h2 class="text-3xl font-bold mb-8 text-center">FAQ</h2>
+
+    <div class="space-y-6 max-w-3xl mx-auto">
+      {faq.map((item) => (
+        <div class="border-b border-slate-200 pb-6">
+          <h3 class="font-bold text-lg mb-2">{item.question}</h3>
+          <p class="text-slate-600">{item.answer}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</Container>

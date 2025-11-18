@@ -1,0 +1,58 @@
+{
+  "seo": {
+    "title": "Marketing SMART Goals Template | Campaign Planning & ROI Tracker",
+    "description": "Marketing SMART goals template to drive measurable results. Set data-driven objectives for campaigns, leads, and ROI. Built for marketers!",
+    "h1": "Marketing SMART Goals Template for Data-Driven Success"
+  },
+  "subtitle": "Built for marketing professionals, digital marketers, and growth teams who need to set measurable objectives and demonstrate clear ROI.",
+  "examples": [
+    {
+      "title": "Lead Generation Goal",
+      "description": "Generate 500 qualified marketing leads (MQLs) with a minimum lead score of 70 by the end of Q2 2025 by launching 3 targeted LinkedIn ad campaigns, creating 8 gated content pieces, and optimizing 5 high-traffic landing pages, measured through HubSpot analytics and resulting in a 25% increase in sales pipeline."
+    },
+    {
+      "title": "Social Media Growth Goal",
+      "description": "Increase Instagram followers from 15,000 to 30,000 (100% growth) and boost average engagement rate from 2.1% to 4.5% by December 31, 2025, by posting 5 times weekly using data-backed content pillars, running 2 influencer collaborations per month, and investing $2,000 monthly in targeted ads."
+    },
+    {
+      "title": "Content Marketing ROI Goal",
+      "description": "Achieve a 300% ROI on content marketing efforts by driving 50,000 organic website visits and generating $150,000 in attributed revenue from content by Q4 2025, through publishing 3 SEO-optimized blog posts weekly, building 20 high-quality backlinks monthly, and implementing conversion rate optimization on key content pages."
+    }
+  ],
+  "howToWrite": [
+    {
+      "title": "Specific",
+      "description": "Define precise marketing outcomes rather than vague improvements. Specify the channel (email, social, paid ads), audience segment (new customers, existing users, B2B leads), and exact action (increase click-through rate, generate leads, boost brand awareness). Include which tools, platforms, or campaigns you'll use to achieve the goal."
+    },
+    {
+      "title": "Measurable",
+      "description": "Identify concrete marketing metrics and KPIs for tracking. Use quantifiable data like conversion rates, cost per acquisition (CPA), return on ad spend (ROAS), email open rates, website traffic, or social engagement percentages. Set up proper tracking in Google Analytics, your CRM, or marketing automation platform before starting to ensure accurate measurement throughout the campaign."
+    },
+    {
+      "title": "Achievable",
+      "description": "Base your marketing goals on historical data, industry benchmarks, and available resources. Review past campaign performance to set realistic targets. Consider your budget constraints, team capacity, existing technology stack, and market conditions. Ambitious goals should stretch your capabilities while remaining grounded in what your marketing infrastructure can support."
+    },
+    {
+      "title": "Relevant",
+      "description": "Ensure every marketing goal directly supports broader business objectives like revenue growth, customer acquisition, or market expansion. Align with sales targets, product launches, or company-wide initiatives. Each goal should answer: How does this contribute to the bottom line? Marketing goals that don't tie to business outcomes waste resources and lack stakeholder buy-in."
+    },
+    {
+      "title": "Time-bound",
+      "description": "Set deadlines that match marketing campaign cycles, product launch dates, or fiscal quarters. Build in time for testing, optimization, and analysis. Create milestone checkpoints (weekly for ads, monthly for content) to enable agile adjustments. Marketing goals typically run in 30-90 day cycles, allowing for rapid iteration based on performance data."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How do I set realistic KPIs for my marketing SMART goals?",
+      "answer": "Start by analyzing historical performance data from your analytics platforms over the past 6-12 months to establish a baseline. Research industry benchmarks for your sector (resources like HubSpot, Gartner, or industry reports provide averages). For new channels without history, start conservatively—aim for 10-20% improvement in the first quarter. Factor in seasonality, budget changes, and competitive landscape. Test assumptions with small pilot campaigns before committing to large-scale goals, and always build in a buffer for unexpected market conditions."
+    },
+    {
+      "question": "How can SMART goals help prove marketing ROI to leadership?",
+      "answer": "SMART goals create a clear before-and-after framework with measurable outcomes directly tied to business results. By defining specific metrics upfront (leads generated, revenue attributed, cost per acquisition), you establish objective success criteria. Document your baseline, track progress with analytics tools, and calculate ROI using the formula: (Revenue from marketing - Marketing cost) / Marketing cost × 100. Present results with data visualizations showing goal achievement, and connect metrics to business impact—for example, '500 MQLs generated resulted in 50 closed deals worth $250,000 in revenue.'"
+    },
+    {
+      "question": "How often should I review and adjust my marketing SMART goals?",
+      "answer": "Conduct weekly check-ins for active campaigns to monitor real-time performance and make tactical adjustments to underperforming channels. Perform comprehensive monthly reviews to analyze trends, assess progress against milestones, and reallocate budget based on what's working. Do quarterly strategic reviews to evaluate if goals remain relevant given market changes, new competitor actions, or shifted business priorities. Marketing moves fast—be prepared to pivot goals if data shows a fundamental strategy isn't working, but avoid changing course too quickly before gathering sufficient data (minimum 2-4 weeks for most digital campaigns)."
+    }
+  ]
+}

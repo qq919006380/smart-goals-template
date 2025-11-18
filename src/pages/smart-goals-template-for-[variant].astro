@@ -1,0 +1,35 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Layout from "@/layouts/Layout.astro";
+import TemplateLayout from "@/components/TemplateLayout.astro";
+
+export async function getStaticPaths() {
+  const smartGoalsEntries = await getCollection('smart-goals');
+
+  // 过滤掉general（首页用），只生成variant页面
+  const variantEntries = smartGoalsEntries.filter(entry => entry.id !== 'general');
+
+  return variantEntries.map((entry) => ({
+    params: { variant: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const currentPath = `/smart-goals-template-for-${entry.id}`;
+---
+
+<Layout
+  title={entry.data.seo.title}
+  description={entry.data.seo.description}
+>
+  <TemplateLayout
+    h1={entry.data.seo.h1}
+    subtitle={entry.data.subtitle}
+    examples={entry.data.examples}
+    howToWrite={entry.data.howToWrite}
+    faq={entry.data.faq}
+    currentPath={currentPath}
+    variant={entry.id}
+  />
+</Layout>

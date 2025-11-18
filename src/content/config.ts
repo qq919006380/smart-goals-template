@@ -31,9 +31,35 @@ const teamCollection = defineCollection({
   }),
 });
 
+// SMART Goals Templates Collection
+const smartGoalsCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    seo: z.object({
+      title: z.string(),
+      description: z.string(),
+      h1: z.string(),
+    }),
+    subtitle: z.string(),
+    examples: z.array(z.object({
+      title: z.string(),
+      description: z.string(),
+    })),
+    howToWrite: z.array(z.object({
+      title: z.string(),
+      description: z.string(),
+    })),
+    faq: z.array(z.object({
+      question: z.string(),
+      answer: z.string(),
+    })),
+  }),
+});
+
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   'blog': blogCollection,
   'team': teamCollection,
+  'smart-goals': smartGoalsCollection,
 };

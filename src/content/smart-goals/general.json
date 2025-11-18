@@ -1,0 +1,58 @@
+{
+  "seo": {
+    "title": "SMART Goals Template - Free & Printable",
+    "description": "Free SMART goals template to set and achieve your objectives. Download printable templates for work, students, marketing, and personal development.",
+    "h1": "SMART GOALS TEMPLATE"
+  },
+  "subtitle": "Free & Printable SMART Goal Setting Template",
+  "examples": [
+    {
+      "title": "Career Advancement Goal",
+      "description": "Achieve a promotion to Senior Manager position by Q3 2025 by completing leadership certification, leading 2 cross-functional projects, and receiving 'exceeds expectations' in annual performance review, resulting in 15% salary increase and expanded team management responsibilities."
+    },
+    {
+      "title": "Health & Wellness Goal",
+      "description": "Run a half-marathon (13.1 miles) in under 2 hours by October 2025 by following a 16-week training plan, running 4 times weekly with progressive mileage increases, cross-training twice weekly, and tracking performance using a running app to build endurance and achieve a personal fitness milestone."
+    },
+    {
+      "title": "Financial Goal",
+      "description": "Save $15,000 for home down payment by December 31, 2025, by automatically transferring $1,250 monthly to dedicated savings account, reducing entertainment spending by 30%, earning extra $200 monthly through freelance work, and reviewing budget progress every two weeks to achieve homeownership goal."
+    }
+  ],
+  "howToWrite": [
+    {
+      "title": "Specific",
+      "description": "Be clear and precise about what you want to achieve. Instead of saying 'I want to be successful,' define exactly what success means: 'I want to increase monthly revenue by $10,000' or 'I want to lose 15 pounds.' Vague goals lead to vague results. Specific goals create a clear roadmap and make it easier to know when you've achieved them."
+    },
+    {
+      "title": "Measurable",
+      "description": "Include concrete criteria for tracking progress and measuring success. Ask yourself: How much? How many? How will I know when it's accomplished? Use numbers, percentages, or specific milestones. Measurable goals allow you to celebrate progress along the way and make data-driven adjustments to your strategy when needed."
+    },
+    {
+      "title": "Achievable",
+      "description": "Set goals that challenge you while remaining realistic given your current resources, skills, and circumstances. An achievable goal answers 'yes' to: Do I have the necessary resources? Can I realistically commit the required time? Have others succeeded at similar goals? Stretch yourself, but don't set yourself up for failure with impossible objectives."
+    },
+    {
+      "title": "Relevant",
+      "description": "Ensure your goal aligns with your broader life objectives and values. Ask yourself: Does this matter to me personally? Does it align with my other priorities? Is this the right time? Relevant goals maintain your motivation because they're connected to what truly matters in your life and career. Irrelevant goals drain energy without providing meaningful benefits."
+    },
+    {
+      "title": "Time-bound",
+      "description": "Set a specific deadline or time frame for achieving your goal. A goal without a timeline lacks urgency and is easy to postpone indefinitely. Include a clear end date and, for longer goals, set interim milestones. Time constraints create accountability and help you prioritize actions. They also allow you to assess progress and adjust your approach if needed."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What does SMART stand for in goal setting?",
+      "answer": "SMART is an acronym that stands for Specific, Measurable, Achievable, Relevant, and Time-bound. This framework, developed by George T. Doran in 1981, provides criteria for creating effective goals. Specific means clearly defined; Measurable means quantifiable progress; Achievable means realistic given your resources; Relevant means aligned with broader objectives; and Time-bound means having a deadline. Using all five criteria together dramatically increases the likelihood of goal achievement compared to vague intentions."
+    },
+    {
+      "question": "How often should I review my SMART goals?",
+      "answer": "The ideal review frequency depends on your goal timeline, but most experts recommend weekly progress checks and monthly deep reviews. For short-term goals (under 3 months), review weekly to stay on track. For long-term goals (6-12 months), conduct brief weekly check-ins to monitor immediate actions and monthly comprehensive reviews to assess overall trajectory and adjust strategy if needed. Set a specific day and time for reviews—consistency matters more than frequency. During reviews, track measurable metrics, celebrate wins, identify obstacles, and adjust tactics while keeping the core goal intact."
+    },
+    {
+      "question": "Can I change my SMART goals once I've set them?",
+      "answer": "Yes, flexibility is important—but distinguish between tactical adjustments and goal abandonment. You should regularly adjust your methods and tactics based on what's working. However, avoid changing core goals too frequently, as this prevents meaningful progress. Reassess goals quarterly or when significant life circumstances change (job change, health issues, major life events). If a goal consistently feels wrong after 4-6 weeks, examine why: Is it not truly relevant to your priorities? Is it unrealistic? Is it someone else's goal, not yours? Adjust or abandon goals that don't serve you, but give them enough time to work before deciding."
+    }
+  ]
+}

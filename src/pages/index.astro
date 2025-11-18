@@ -1,17 +1,27 @@
 ---
-import Container from "@/components/container.astro";
-import Cta from "@/components/cta.astro";
-import Features from "@/components/features.astro";
-import Hero from "@/components/hero.astro";
-import Logos from "@/components/logos.astro";
+import { getEntry } from 'astro:content';
 import Layout from "@/layouts/Layout.astro";
+import TemplateLayout from "@/components/TemplateLayout.astro";
+
+// 获取general数据用于首页
+const generalEntry = await getEntry('smart-goals', 'general');
+
+if (!generalEntry) {
+  throw new Error('General template data not found');
+}
 ---
 
-<Layout title="">
-  <Container>
-    <Hero />
-    <Features />
-    <Logos />
-    <Cta />
-  </Container>
+<Layout
+  title={generalEntry.data.seo.title}
+  description={generalEntry.data.seo.description}
+>
+  <TemplateLayout
+    h1={generalEntry.data.seo.h1}
+    subtitle={generalEntry.data.subtitle}
+    examples={generalEntry.data.examples}
+    howToWrite={generalEntry.data.howToWrite}
+    faq={generalEntry.data.faq}
+    currentPath="/"
+    variant="general"
+  />
 </Layout>

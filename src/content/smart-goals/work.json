@@ -22,37 +22,37 @@
   "howToWrite": [
     {
       "title": "Specific",
-      "description": "Define your professional goal with precision. Instead of 'improve at work,' specify 'increase sales by 20%' or 'complete leadership training.' Include what you want to accomplish, why it matters to your career, and which resources or stakeholders are involved."
+      "description": "\"Improve at work\" is too vague. Say \"increase sales 20%\" or \"earn PMP certification.\" Name exactly what you're doing and why it matters to your career."
     },
     {
       "title": "Measurable",
-      "description": "Identify concrete metrics to track progress in your work goals. Use KPIs such as revenue numbers, completion percentages, customer satisfaction scores, or skill certifications. Regular measurement through performance reviews or project tracking tools keeps you accountable and allows for data-driven adjustments."
+      "description": "Use concrete numbers: revenue, project completion %, customer satisfaction scores, certifications earned. If you can't measure it, you can't track whether it's working."
     },
     {
       "title": "Achievable",
-      "description": "Ensure your professional goals align with your current skills, available resources, and organizational support. Consider your workload, budget constraints, and company priorities. Challenge yourself while remaining realistic about what you can accomplish given your role and responsibilities."
+      "description": "Consider your actual workload, budget, and support. Stretch yourself, but don't set goals that require resources you don't have or skills you can't realistically build in the timeframe."
     },
     {
       "title": "Relevant",
-      "description": "Align your goals with both your career aspirations and your organization's objectives. Every work goal should contribute to your professional development while supporting team and company success. Consider how this goal fits into your annual performance review and long-term career path."
+      "description": "Does this goal help your career AND your company? If it only serves you or only serves the business, motivation will fade. Best goals align both."
     },
     {
       "title": "Time-bound",
-      "description": "Set clear deadlines that align with business cycles, fiscal quarters, or performance review periods. Break larger annual goals into quarterly milestones with specific dates. This creates urgency and allows you to coordinate with project timelines and organizational planning cycles."
+      "description": "Tie deadlines to business cycles — quarters, performance reviews, fiscal year ends. Break annual goals into quarterly checkpoints so you catch problems early."
     }
   ],
   "faq": [
     {
       "question": "How do I align my personal SMART goals with company OKRs?",
-      "answer": "Start by reviewing your organization's quarterly or annual OKRs (Objectives and Key Results). Identify which company objectives relate to your role, then create SMART goals that directly contribute to those outcomes. For example, if a company OKR is to increase customer retention by 15%, your SMART goal might be to reduce customer support response time from 24 to 12 hours. Schedule regular check-ins with your manager to ensure continued alignment as priorities shift."
+      "answer": "Check your company's quarterly OKRs and find where your role connects. If the company wants 15% better customer retention, your goal might be cutting support response time from 24 to 12 hours. Check in with your manager quarterly to make sure you're still aligned."
     },
     {
       "question": "How many professional SMART goals should I set at once?",
-      "answer": "For optimal focus and achievement, limit yourself to 3-5 SMART goals per quarter or 5-7 for the entire year. This prevents overwhelm while allowing you to address multiple aspects of your professional development. Prioritize goals by impact and urgency, and ensure you have adequate time and resources to pursue each one. Quality and completion are more valuable than quantity."
+      "answer": "3-5 goals per quarter is plenty. More than that and you're spreading yourself too thin. Pick the ones with the biggest impact and focus there. Quality beats quantity."
     },
     {
       "question": "How should I use SMART goals in performance reviews?",
-      "answer": "Document your SMART goals at the beginning of each review period and share them with your manager for alignment. During mid-year or quarterly check-ins, present specific progress metrics and any obstacles encountered. At annual reviews, demonstrate achievement with concrete data from your measurable criteria. This structured approach provides clear evidence of your contributions and makes performance discussions more productive and objective."
+      "answer": "Set goals with your manager at the start of the review period. Check progress at mid-year with actual numbers. At year-end, show concrete results tied to your measurable criteria. This makes reviews way less awkward — you've got data, not opinions."
     }
   ]
 }

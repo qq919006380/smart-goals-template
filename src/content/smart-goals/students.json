@@ -22,37 +22,37 @@
   "howToWrite": [
     {
       "title": "Specific",
-      "description": "Clearly define your academic or personal development objective. Instead of 'do better in school,' specify 'achieve an A in Calculus II' or 'read 15 books this semester.' Include the subject, activity, or skill you're targeting and exactly what success looks like for you as a student."
+      "description": "\"Do better in school\" means nothing. Say \"get an A in Calculus II\" or \"read 15 books this semester.\" Be specific about the class, skill, or activity."
     },
     {
       "title": "Measurable",
-      "description": "Use concrete academic metrics to track your progress. This could be grade point averages, test scores, number of assignments completed, study hours logged, or skills mastered. Create a simple tracking system using a planner, app, or spreadsheet to monitor your progress weekly and adjust your study strategies as needed."
+      "description": "Use numbers: GPA, test scores, assignments completed, study hours. Track weekly in a planner or app so you know if you're actually improving or just hoping."
     },
     {
       "title": "Achievable",
-      "description": "Set goals that challenge you while considering your current academic standing, course load, extracurricular commitments, and available study time. Be honest about your starting point and resources. A realistic goal stretches your abilities without causing burnout or requiring you to sacrifice sleep, health, or other important aspects of student life."
+      "description": "Be honest about your current grades, course load, and time. Challenge yourself, but don't set goals that require sacrificing sleep or sanity. Burnout helps no one."
     },
     {
       "title": "Relevant",
-      "description": "Ensure each goal supports your academic major, career aspirations, or personal growth priorities. Ask yourself how this goal contributes to your degree requirements, future career plans, or essential skill development. Student goals should balance immediate academic needs with long-term educational and professional objectives."
+      "description": "Does this goal help your major, career plans, or personal growth? If it's just busywork that doesn't serve any real purpose, you won't stick with it."
     },
     {
       "title": "Time-bound",
-      "description": "Align deadlines with academic calendars—semester end dates, midterm periods, application deadlines, or graduation timelines. Break semester-long goals into monthly or weekly milestones that coincide with assignment due dates and exam schedules. This helps you stay on track despite the fluctuating demands of student life."
+      "description": "Tie deadlines to your academic calendar — semester ends, midterms, application deadlines. Break semester goals into monthly checkpoints so you're not cramming everything in finals week."
     }
   ],
   "faq": [
     {
       "question": "How do I balance academic SMART goals with extracurricular activities?",
-      "answer": "Create separate but interconnected goal categories: 2-3 academic goals (grades, skills, projects) and 1-2 extracurricular goals (clubs, sports, volunteering). Use a time-blocking calendar to allocate specific hours for each area. Ensure your goals complement rather than compete—for example, joining the debate club can improve public speaking skills needed for class presentations. Review weekly to maintain balance and adjust if one area consistently suffers."
+      "answer": "Set 2-3 academic goals and max 1-2 extracurricular goals. Use a calendar to block time for each. Best case: your activities support your academics (debate club helps with presentations). Review weekly and adjust if one area is suffering."
     },
     {
       "question": "How many SMART goals should a student set per semester?",
-      "answer": "Aim for 3-4 goals per semester to maintain focus without overwhelming yourself. Typically, set 2 academic goals (like improving in specific courses or developing study skills), 1 skill development goal (like learning coding or a language), and 1 personal or extracurricular goal. First-year students should start with just 2-3 goals as they adjust to college life. Quality and completion matter more than quantity."
+      "answer": "3-4 goals max. Try 2 academic (specific courses or study skills), 1 skill development (coding, language), and 1 personal/extracurricular. First-year students should start with just 2-3 while adjusting to college. Quality over quantity."
     },
     {
       "question": "What's the best way to track progress on student SMART goals?",
-      "answer": "Use a combination of digital and physical tracking methods. Create a simple spreadsheet or use apps like Notion or Todoist to log measurable metrics (study hours, test scores, completed chapters). Keep a weekly reflection journal to note what's working and what needs adjustment. Schedule bi-weekly 15-minute reviews to assess progress against your timeline. Share goals with a study partner or accountability buddy for external motivation and support."
+      "answer": "Use a simple spreadsheet or app like Notion to log metrics (study hours, test scores). Do a quick weekly check on Sundays — 15 minutes to see if you're on track. Having a study buddy to check in with helps too."
     }
   ]
 }

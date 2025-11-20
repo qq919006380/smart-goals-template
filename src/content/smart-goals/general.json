@@ -7,16 +7,16 @@
   "subtitle": "Free & Printable SMART Goals Template for Effective Goal Setting",
   "examples": [
     {
-      "title": "Career Advancement Goal",
-      "description": "Achieve a promotion to Senior Manager position by Q3 2025 by completing leadership certification, leading 2 cross-functional projects, and receiving 'exceeds expectations' in annual performance review, resulting in 15% salary increase and expanded team management responsibilities."
+      "title": "Career Goal",
+      "description": "Get promoted to Senior Manager by Q3 2025. Complete leadership certification, lead 2 projects, hit 'exceeds expectations' in annual review. Result: 15% raise + bigger team."
     },
     {
-      "title": "Health & Wellness Goal",
-      "description": "Run a half-marathon (13.1 miles) in under 2 hours by October 2025 by following a 16-week training plan, running 4 times weekly with progressive mileage increases, cross-training twice weekly, and tracking performance using a running app to build endurance and achieve a personal fitness milestone."
+      "title": "Fitness Goal",
+      "description": "Run a half-marathon in under 2 hours by October 2025. Follow 16-week training plan, run 4x/week with increasing mileage, track progress in app."
     },
     {
-      "title": "Financial Goal",
-      "description": "Save $15,000 for home down payment by December 31, 2025, by automatically transferring $1,250 monthly to dedicated savings account, reducing entertainment spending by 30%, earning extra $200 monthly through freelance work, and reviewing budget progress every two weeks to achieve homeownership goal."
+      "title": "Money Goal",
+      "description": "Save $15,000 for house down payment by Dec 31, 2025. Auto-save $1,250/month, cut entertainment 30%, earn $200/month freelancing. Review every 2 weeks."
     }
   ],
   "howToWrite": [
@@ -43,16 +43,16 @@
   ],
   "faq": [
     {
-      "question": "What does SMART stand for in goal setting?",
-      "answer": "SMART stands for Specific, Measurable, Achievable, Relevant, and Time-bound. It's a framework from 1981 that gives you clear criteria for setting goals that actually work. Instead of saying \"I want to get fit,\" you'd say \"I'll run a 5K in under 30 minutes by June.\" Much clearer, right?"
+      "question": "What does SMART stand for?",
+      "answer": "Specific, Measurable, Achievable, Relevant, Time-bound. Instead of \"get fit,\" say \"run a 5K in under 30 minutes by June.\""
     },
     {
-      "question": "How often should I review my SMART goals?",
-      "answer": "Depends on the goal. For short-term stuff (under 3 months), check in weekly. For bigger goals, a quick weekly check plus a deeper monthly review works well. The key is consistency — pick a day and stick to it. Sunday evenings work great for most people."
+      "question": "How often should I review my goals?",
+      "answer": "Short-term goals (under 3 months): weekly. Long-term goals: weekly check + monthly deep dive. Pick a consistent day — Sunday evenings work best."
     },
     {
-      "question": "Can I change my SMART goals once I've set them?",
-      "answer": "Absolutely. If something's not working after 4-6 weeks, adjust it. Life changes, priorities shift. Just don't change goals every other day — that's procrastination in disguise. Quarterly reviews are a good rhythm for major adjustments."
+      "question": "Can I change my goals after setting them?",
+      "answer": "Yes. If it's not working after 4-6 weeks, adjust. But don't change every week — that's just procrastination. Quarterly reviews for major changes."
     }
   ]
 }

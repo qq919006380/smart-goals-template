@@ -48,6 +48,132 @@ const { h1, subtitle, examples, howToWrite, faq, currentPath, variant } = Astro.
   <!-- 可编辑的SMART Goal模板（包含导出按钮） -->
   <EditableTemplate />
 
+  <!-- Google Docs 文档预览区域 -->
+  <section class="my-16">
+    <h2 class="text-3xl font-bold mb-8 text-center">SMART Goals Examples & Resources</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Sample Personal SMART Goals -->
+      <a
+        href="https://docs.google.com/document/d/14963lsPSfRRrIUbcOrncY8DvShdQtf6WfIaNU3NDZ2U/preview"
+        target="_blank"
+        class="docs-card group"
+      >
+        <div class="docs-preview">
+          <iframe
+            src="https://docs.google.com/document/d/14963lsPSfRRrIUbcOrncY8DvShdQtf6WfIaNU3NDZ2U/preview"
+            title="Sample Personal SMART Goals"
+            loading="lazy"
+            class="pointer-events-none"
+          ></iframe>
+          <div class="docs-overlay">
+            <span class="view-text">View Document</span>
+          </div>
+        </div>
+        <h3 class="docs-title">Sample Personal SMART Goals</h3>
+      </a>
+
+      <!-- SMART Goals for Employees -->
+      <a
+        href="https://docs.google.com/document/d/1P7lCnj8Kzv1CXYKuqYe5vkcDWG-KKKe_5NcVXeJoUl8/preview"
+        target="_blank"
+        class="docs-card group"
+      >
+        <div class="docs-preview">
+          <iframe
+            src="https://docs.google.com/document/d/1P7lCnj8Kzv1CXYKuqYe5vkcDWG-KKKe_5NcVXeJoUl8/preview"
+            title="SMART Goals for Employees"
+            loading="lazy"
+            class="pointer-events-none"
+          ></iframe>
+          <div class="docs-overlay">
+            <span class="view-text">View Document</span>
+          </div>
+        </div>
+        <h3 class="docs-title">SMART Goals for Students</h3>
+      </a>
+
+      <!-- SMART Goals for Students -->
+      <a
+        href="https://docs.google.com/document/d/1wVQfCJgmWsRGfzx-n7oVcy3nelrQxfiVUkLo9OaxPso/preview"
+        target="_blank"
+        class="docs-card group"
+      >
+        <div class="docs-preview">
+          <iframe
+            src="https://docs.google.com/document/d/1wVQfCJgmWsRGfzx-n7oVcy3nelrQxfiVUkLo9OaxPso/preview"
+            title="SMART Goals for Students"
+            loading="lazy"
+            class="pointer-events-none"
+          ></iframe>
+          <div class="docs-overlay">
+            <span class="view-text">View Document</span>
+          </div>
+        </div>
+        <h3 class="docs-title">SMART Goals for Employees</h3>
+      </a>
+
+      <!-- Time-bound Goals -->
+      <a
+        href="https://docs.google.com/document/d/1BflRJBOnztdlLYpyXTDz8v_gr1TjjThNGzWF9q82_rU/preview"
+        target="_blank"
+        class="docs-card group"
+      >
+        <div class="docs-preview">
+          <iframe
+            src="https://docs.google.com/document/d/1BflRJBOnztdlLYpyXTDz8v_gr1TjjThNGzWF9q82_rU/preview"
+            title="Time-bound Goals"
+            loading="lazy"
+            class="pointer-events-none"
+          ></iframe>
+          <div class="docs-overlay">
+            <span class="view-text">View Document</span>
+          </div>
+        </div>
+        <h3 class="docs-title">Time-bound Goals</h3>
+      </a>
+
+      <!-- SMART Goals Worksheet -->
+      <a
+        href="https://docs.google.com/document/d/1XDcndfnlEN3egPyDWbDAKaqexcFSvOQburwDwKszfOM/preview"
+        target="_blank"
+        class="docs-card group"
+      >
+        <div class="docs-preview">
+          <iframe
+            src="https://docs.google.com/document/d/1XDcndfnlEN3egPyDWbDAKaqexcFSvOQburwDwKszfOM/preview"
+            title="SMART Goals Worksheet"
+            loading="lazy"
+            class="pointer-events-none"
+          ></iframe>
+          <div class="docs-overlay">
+            <span class="view-text">View Document</span>
+          </div>
+        </div>
+        <h3 class="docs-title">SMART Goals Worksheet</h3>
+      </a>
+
+      <!-- Sample Smart Goal -->
+      <a
+        href="https://docs.google.com/document/d/13EIN6QO-L1jPtTJ0FSSmkcL5-jbvzfQctMDd-W--CPk/preview"
+        target="_blank"
+        class="docs-card group"
+      >
+        <div class="docs-preview">
+          <iframe
+            src="https://docs.google.com/document/d/13EIN6QO-L1jPtTJ0FSSmkcL5-jbvzfQctMDd-W--CPk/preview"
+            title="Sample Smart Goal"
+            loading="lazy"
+            class="pointer-events-none"
+          ></iframe>
+          <div class="docs-overlay">
+            <span class="view-text">View Document</span>
+          </div>
+        </div>
+        <h3 class="docs-title">Sample Smart Goal</h3>
+      </a>
+    </div>
+  </section>
+
   <!-- 模板预览图片展示 -->
   <section class="my-16">
     <h2 class="text-3xl font-bold mb-8 text-center">SMART Goals Template Preview</h2>
@@ -144,6 +270,93 @@ const { h1, subtitle, examples, howToWrite, faq, currentPath, variant } = Astro.
   </section>
 
   <style>
+    /* Google Docs 卡片样式 */
+    .docs-card {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .docs-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .docs-preview {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1.414; /* A4 比例 */
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .docs-preview iframe {
+      width: 200%;
+      height: 200%;
+      border: none;
+      transform: scale(0.5);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+
+    .docs-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+
+    .docs-card:hover .docs-overlay {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .view-text {
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.3s ease;
+    }
+
+    .docs-card:hover .view-text {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .docs-title {
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #333;
+      text-align: center;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    /* 响应式调整 */
+    @media (max-width: 1024px) {
+      .docs-preview {
+        aspect-ratio: 1 / 1.414;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .docs-card {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    /* 模板预览样式 */
     .template-preview-item {
       display: block;
       overflow: hidden;

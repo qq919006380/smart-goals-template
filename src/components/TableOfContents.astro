@@ -1,0 +1,194 @@
+---
+// 吸顶目录组件
+---
+
+<aside id="toc-container" class="toc-container">
+  <nav class="toc-nav">
+    <div class="toc-header">
+      <h3 class="toc-title">On This Page</h3>
+    </div>
+    <ul id="toc-list" class="toc-list"></ul>
+  </nav>
+</aside>
+
+<style>
+  .toc-container {
+    position: fixed;
+    top: 120px;
+    right: 32px;
+    width: 260px;
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+    background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
+    border: 1px solid rgba(59, 130, 246, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.03),
+      0 10px 15px -3px rgba(59, 130, 246, 0.05),
+      0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    backdrop-filter: blur(8px);
+    z-index: 100;
+  }
+
+  .toc-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(59, 130, 246, 0.1) 50%,
+      transparent 100%);
+  }
+
+  .toc-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  }
+
+  .toc-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    margin-bottom: 8px;
+  }
+
+  .toc-list a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.6;
+    display: block;
+    border-left: 2px solid transparent;
+    padding: 6px 0 6px 14px;
+    border-radius: 4px;
+  }
+
+  .toc-list a:hover {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.04);
+    border-left-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .toc-list a.active {
+    color: #2563eb;
+    font-weight: 500;
+    background: rgba(59, 130, 246, 0.08);
+    border-left-color: #3b82f6;
+  }
+
+  /* 隐藏在小屏幕上 */
+  @media (max-width: 1280px) {
+    .toc-container {
+      display: none;
+    }
+  }
+
+  /* 自定义滚动条 */
+  .toc-container::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .toc-container::-webkit-scrollbar-track {
+    background: rgba(241, 245, 249, 0.5);
+    border-radius: 10px;
+    margin: 8px 0;
+  }
+
+  .toc-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #cbd5e1 0%, #94a3b8 100%);
+    border-radius: 10px;
+    transition: background 0.2s;
+  }
+
+  .toc-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #94a3b8 0%, #64748b 100%);
+  }
+
+  /* Firefox */
+  .toc-container {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 rgba(241, 245, 249, 0.5);
+  }
+</style>
+
+<script>
+  // 等待DOM加载完成
+  document.addEventListener('DOMContentLoaded', () => {
+    const tocList = document.getElementById('toc-list');
+    const tocContainer = document.getElementById('toc-container');
+
+    if (!tocList || !tocContainer) return;
+
+    // 获取所有H2标题
+    const headings = document.querySelectorAll('.prose h2');
+
+    if (headings.length === 0) return;
+
+    // 生成目录
+    headings.forEach((heading, index) => {
+      // 为标题添加id（如果没有）
+      if (!heading.id) {
+        heading.id = `heading-${index}`;
+      }
+
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `#${heading.id}`;
+      a.textContent = heading.textContent || '';
+      a.classList.add('toc-link');
+
+      // 平滑滚动
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.history.pushState(null, '', `#${heading.id}`);
+      });
+
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+
+
+    // 滚动时高亮当前章节
+    const observerOptions = {
+      root: null,
+      rootMargin: '-80px 0px -80% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.id;
+        const link = tocList.querySelector(`a[href="#${id}"]`);
+
+        if (entry.isIntersecting && link) {
+          // 移除所有active
+          tocList.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+          // 添加当前active
+          link.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    // 观察所有标题
+    headings.forEach(heading => {
+      observer.observe(heading);
+    });
+  });
+</script>

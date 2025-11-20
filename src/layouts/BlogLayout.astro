@@ -1,5 +1,6 @@
 ---
 import Container from "@/components/container.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
 import { getFormattedDate } from "@/utils/all";
 import Layout from "./Layout.astro";
 
@@ -46,4 +47,7 @@ const { frontmatter } = Astro.props;
       >
     </div>
   </Container>
+
+  <!-- 吸顶目录 -->
+  <TableOfContents />
 </Layout>

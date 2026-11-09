@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hasiyu.com/sitemap-index.xml
+Sitemap: https://xxx.hasiyu.com/sitemap-index.xml
